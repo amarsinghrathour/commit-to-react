@@ -1,9 +1,18 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 
 function Counter(){
 
-    const [count,setCount]=useState(0);
+  //using local storage with useEffect to persist the count
+  const [count, setCount] = useState(() => {
+    const saved = localStorage.getItem('count');
+    return saved !== null ? Number(saved) : 0;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('count', count);
+  }, [count]);
+
 const decrement = () => {
   if (count > 0) {
     setCount(count - 1);

@@ -1,17 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Welcome from './components/Welcome'
-import Counter from './components/Counter'
+import "./App.css"
+import Welcome from '@/components/Welcome'
+import Counter from '@/components/Counter'
+import Form from '@/components/Form'
+import EffectDemo from '@/components/EffectDemo'
+
 
 function App() {
   
 
   return (
    <>
-   <Welcome name="Amar"></Welcome>
-   <Counter/>
+    <Welcome name="Amar"></Welcome>
+    <Counter/>
+    <Form />
+    <EffectDemo />
    </>
   );
 }
