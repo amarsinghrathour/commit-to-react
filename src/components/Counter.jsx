@@ -19,12 +19,29 @@ const decrement = () => {
   }
 };
     return (
-     <div>
-        <p>count {count}</p>
-        <button onClick={()=>setCount(count+1)} > Increment </button>
-        <button onClick={() => decrement()}> Decrement </button>
-        <button onClick={()=>setCount(0)}>Reset</button>
-     </div>
+      <div className="flex flex-col items-center space-y-4">
+      <p className="text-xl font-semibold">Count: {count}</p>
+      <div className="flex space-x-4">
+        <button
+          onClick={() => setCount(count + 1)}
+          className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+        >
+          Increment
+        </button>
+        <button
+          onClick={decrement}
+          className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+        >
+          Decrement
+        </button>
+        <button
+          onClick={() => setCount(0)}
+          className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
 
     );
 
